@@ -1,0 +1,35 @@
+{
+  "name": "expressVPN-test",
+  "version": "1.0.0",
+  "description": "Writing some cool tests for exprss vpn",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "nodemon --exec npm run babel-node -- app/index.js",
+    "test": "mocha --require @babel/register --require ./test/bootstrap.js --reporter spec ./app/**/*.spec.js",
+    "babel-node": "babel-node",
+    "tdd": "nodemon --exec npm run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^6.26.0",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.1.0",
+    "nock": "^9.2.5",
+    "nodemon": "^1.18.4",
+    "proxyquire": "^2.0.1",
+    "sinon": "^4.5.0",
+    "sinon-chai": "^3.0.0"
+  },
+  "dependencies": {
+    "es6-promise": "^4.2.4",
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
